@@ -24,7 +24,7 @@ except ImportError:
     enum = None
 
 
-class SimpleModel(object):
+class SimpleModel:
 
     def after_func(self):
         pass
@@ -70,7 +70,7 @@ class TestRep(TestCase):
         self.assertEqual(rep(pcheck), "check(True, doublecheck=True)")
 
     def test_rep_callable_class(self):
-        class Check(object):
+        class Check:
             def __init__(self, result):
                 self.result = result
 

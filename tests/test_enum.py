@@ -92,7 +92,7 @@ class TestEnumsAsStates(TestCase):
             ONE = 1
             TWO = 2
 
-        class Stuff(object):
+        class Stuff:
             def __init__(self, machine_cls):
                 self.state = None
                 self.machine = machine_cls(states=States, initial=States.ONE, model=self)

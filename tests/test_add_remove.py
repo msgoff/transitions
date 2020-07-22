@@ -11,7 +11,7 @@ import weakref
 import threading
 
 
-class Dummy(object):
+class Dummy:
     pass
 
 

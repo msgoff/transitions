@@ -105,7 +105,7 @@ class TestTransitions(TestCase):
         class CustomMachine(Machine):
             pass
 
-        class Model(object):
+        class Model:
 
             def on_timeout_B(self):
                 counter()
@@ -155,7 +155,7 @@ class TestTransitions(TestCase):
 
     def test_volatile(self):
 
-        class TemporalState(object):
+        class TemporalState:
 
             def __init__(self):
                 self.value = 5

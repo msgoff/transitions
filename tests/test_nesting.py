@@ -32,7 +32,7 @@ except ImportError:  # pragma: no cover
 default_separator = NestedState.separator
 
 
-class Dummy(object):
+class Dummy:
     pass
 
 
@@ -363,7 +363,7 @@ class TestNestedTransitions(TestTransitions):
         machine.on_enter_caffeinated_running('callback_method')
 
     def test_multiple_models(self):
-        class Model(object):
+        class Model:
             pass
         s1, s2 = Model(), Model()
         m = self.stuff.machine_cls(model=[s1, s2], states=['A', 'B', 'C'], initial='A')

@@ -832,7 +832,7 @@ class TestTransitions(TestCase):
     def test_skip_override(self):
         local_mock = MagicMock()
 
-        class Model(object):
+        class Model:
 
             def go(self):
                 local_mock()

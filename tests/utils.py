@@ -1,7 +1,7 @@
 from transitions import Machine
 
 
-class Stuff(object):
+class Stuff:
 
     is_false = False
     is_True = True
@@ -99,11 +99,11 @@ class InheritedStuff(Machine):
         return True
 
 
-class DummyModel(object):
+class DummyModel:
     pass
 
 
-class SomeContext(object):
+class SomeContext:
     def __init__(self, event_list):
         self._event_list = event_list
 

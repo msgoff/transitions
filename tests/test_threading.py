@@ -118,7 +118,7 @@ class TestLockedTransitions(TestCore):
 
     def test_context_managers(self):
 
-        class CounterContext(object):
+        class CounterContext:
             def __init__(self):
                 self.counter = 0
                 self.level = 0
