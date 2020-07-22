@@ -70,7 +70,7 @@ def _prep_ordered_arg(desired_length, arguments=None):
     return arguments
 
 
-class State(object):
+class State:
     """A persistent representation of a state managed by a ``Machine``.
 
     Attributes:
@@ -141,7 +141,7 @@ class State(object):
         return "<%s('%s')@%s>" % (type(self).__name__, self.name, id(self))
 
 
-class Condition(object):
+class Condition:
     """ A helper class to call condition checks in the intended way.
 
     Attributes:
@@ -185,7 +185,7 @@ class Condition(object):
         return "<%s(%s)@%s>" % (type(self).__name__, self.func, id(self))
 
 
-class Transition(object):
+class Transition:
     """ Representation of a transition managed by a ``Machine`` instance.
 
     Attributes:
@@ -293,7 +293,7 @@ class Transition(object):
                                         self.source, self.dest, id(self))
 
 
-class EventData(object):
+class EventData:
     """ Collection of relevant data related to the ongoing transition attempt.
 
     Attributes:
@@ -347,7 +347,7 @@ class EventData(object):
                                       getattr(self, 'transition'), id(self))
 
 
-class Event(object):
+class Event:
     """ A collection of transitions assigned to the same trigger
 
     """
@@ -440,7 +440,7 @@ class Event(object):
             trans.add_callback(trigger, func)
 
 
-class Machine(object):
+class Machine:
     """ Machine manages states, transitions and models. In case it is initialized without a specific model
     (or specifically no model), it will also act as a model itself. Machine takes also care of decorating
     models with conveniences functions related to added transitions and states during runtime.

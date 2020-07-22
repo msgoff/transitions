@@ -30,7 +30,7 @@ except (ImportError, SyntaxError):
         pass
 
 
-class MachineFactory(object):
+class MachineFactory:
     """
         Convenience factory for machine class retrieval.
     """

@@ -237,7 +237,7 @@ class GraphMachine(MarkupMachine):
             model.get_graph(force_new=True)
 
 
-class BaseGraph(object):
+class BaseGraph:
 
     def __init__(self, machine, title=None):
         self.machine = machine
